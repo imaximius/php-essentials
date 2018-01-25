@@ -8,7 +8,7 @@ function runPhpEssentials()
 	docker run -rm -i -t \
 	  --volume  ${PWD}:${RWDIR}:${VOLUME_MODE} \
 	  --workdir        ${RWDIR} \
-	  darh/php-essentials $@
+	  imaximius/php-essentials $@
 }
 
 function runPhpInternalServer()
@@ -24,7 +24,7 @@ function runPhpInternalServer()
 	  --volume  ${PWD}:${RWDIR}:${VOLUME_MODE} \
 	  --workdir        ${RWDIR} \
 	  --publish ${PHPS_PORT}:${PHPS_PORT} \
-	  darh/php-essentials \
+	  imaximius/php-essentials \
 	  php -S ${PHPS_HOST}:${PHPS_PORT} -t ${RWDIR} $@
 }
 

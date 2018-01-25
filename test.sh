@@ -17,7 +17,7 @@ function run()
 	docker run -rm -i -t \
 		--volume ${PWD}/test:/test:r \
 		--workdir /test \
-		darh/php-essentials $@
+		imaximius/php-essentials $@
 }
 
 function report()
