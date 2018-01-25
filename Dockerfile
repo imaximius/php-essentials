@@ -38,7 +38,7 @@ RUN pecl install amqp \
 
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
     apt install -y nodejs && \
-    npm install swagger
+    npm install -g swagger
 
 # Add path to composed tools
 ENV PATH /root/.composer/vendor/bin:$PATH
