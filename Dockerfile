@@ -36,8 +36,10 @@ RUN /usr/local/bin/composer global require \
 RUN pecl install amqp \
     && docker-php-ext-enable amqp
 
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
-    apt install -y nodejs npm
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - \
+    && apt install -y nodejs npm \
+    && npm i npm@latest -g
+
 
 RUN npm install -g swagger
 
