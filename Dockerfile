@@ -37,8 +37,7 @@ RUN pecl install amqp \
     && docker-php-ext-enable amqp
 
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - \
-    && apt install -y nodejs npm \
-    && npm i npm@latest -g
+    && apt install -y nodejs npm
 
 
 RUN npm install -g swagger
