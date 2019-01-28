@@ -27,9 +27,8 @@ RUN cd /usr/local/bin && \
 #deprecation-detector
 
 RUN /usr/local/bin/composer global require \
-	'squizlabs/php_codesniffer=2.9.*' \
+	'squizlabs/php_codesniffer=3.4.*' \
 	'pdepend/pdepend=2.5.*' \
-	' =2.6.*' \
 	'sensiolabs-de/deprecation-detector=0.1.*@dev'
 
 # Install AMPQ ext
