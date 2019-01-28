@@ -1,6 +1,6 @@
 FROM php:7.2-fpm
 
-MAINTAINER Maksym Churkin <m.churkyn@globalgames.net>
+MAINTAINER Maksym Churkin <imaximius@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
