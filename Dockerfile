@@ -29,7 +29,10 @@ RUN cd /usr/local/bin && \
 RUN /usr/local/bin/composer global require \
 	'squizlabs/php_codesniffer=3.4.*' \
 	'pdepend/pdepend=2.5.*' \
-	'sensiolabs-de/deprecation-detector=0.1.*@dev'
+	'phpstan/phpstan-symfony=0.11.*' \
+	'phpstan/phpstan-phpunit=0.11.*' \
+	'phpstan/phpstan-doctrine=0.11.*' \
+	'phpstan/phpstan=0.11.*'
 
 # Install AMPQ ext
 RUN pecl install amqp \
