@@ -18,11 +18,11 @@ ADD https://phar.phpunit.de/phpunit.phar  /usr/local/bin/phpunit
 ADD https://phar.phpunit.de/phpcpd.phar   /usr/local/bin/phpcpd
 ADD https://phar.phpunit.de/phpdcd.phar   /usr/local/bin/phpdcd
 ADD https://phar.phpunit.de/phploc.phar   /usr/local/bin/phploc
-#ADD https://github.com/sensiolabs-de/deprecation-detector/releases/download/0.1.0-alpha4/deprecation-detector.phar /usr/local/bin/deprecation-detector
+ADD https://github.com/sensiolabs-de/deprecation-detector/releases/download/0.1.0-alpha4/deprecation-detector.phar /usr/local/bin/deprecation-detector
 
 # Make the tools executable
 RUN cd /usr/local/bin && \
-    chmod +x composer phpunit phpcpd phpdcd phploc
+    chmod +x composer phpunit phpcpd phpdcd phploc deprecation-detector
 
 #deprecation-detector
 
