@@ -33,7 +33,8 @@ RUN /usr/local/bin/composer global require \
 	'phpstan/phpstan-symfony=0.11.*' \
 	'phpstan/phpstan-phpunit=0.11.*' \
 	'phpstan/phpstan-doctrine=0.11.*' \
-	'phpstan/phpstan=0.11.*'
+	'phpstan/phpstan=0.11.*' \
+    'phpstan/extension-installer=^1.0.1'
 
 # Install AMPQ ext
 RUN pecl install amqp \
