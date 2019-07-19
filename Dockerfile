@@ -39,6 +39,10 @@ RUN /usr/local/bin/composer global require \
 RUN pecl install amqp \
     && docker-php-ext-enable amqp
 
+# Add mongodb extention
+RUN pecl install mongodb \
+    && docker-php-ext-enable mongodb
+
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - \
     && apt install -y npm
 
