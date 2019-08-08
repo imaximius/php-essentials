@@ -10,7 +10,8 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     git \
     unzip \
     librabbitmq-dev \
-    gnupg
+    gnupg \
+    libxml2-dev
 
 # Additional tools
 ADD https://getcomposer.org/composer.phar /usr/local/bin/composer
@@ -43,6 +44,8 @@ RUN pecl install amqp \
 # Add mongodb extention
 RUN pecl install mongodb \
     && docker-php-ext-enable mongodb
+
+RUN docker-php-ext-install soap
 
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - \
     && apt install -y npm
